@@ -1,0 +1,16 @@
+/* Style for the main buttons in Teacher Home */
+.homeButton {
+    -fx-font-size: 24px;              /* Large font size */
+    -fx-font-weight: bold;            /* Bold text */
+    -fx-background-color: #4CAF50;    /* Base background color */
+    -fx-text-fill: white;             /* Text color */
+    -fx-padding: 15px 30px;           /* Padding for bigger button */
+    -fx-background-radius: 10px;      /* Rounded corners */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0, 3, 3); /* Drop shadow */
+}
+
+/* Hover effect for the buttons */
+.homeButton:hover {
+    -fx-background-color: #45a049;    /* Darker green when hovered */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 10, 0, 4, 4); /* Slightly stronger shadow */
+}

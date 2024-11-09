@@ -1,0 +1,83 @@
+/* Apply a background image to the AnchorPane */
+.root {
+    -fx-background-image: url("images/quiz-background.jpg"); /* Path to the image file */
+    -fx-background-size: cover;  /* Ensures the image covers the entire background */
+    -fx-background-position: center center; /* Centers the image */
+    -fx-background-repeat: no-repeat;
+}
+
+/* Styling for the title text */
+.titleText {
+    -fx-font-size: 48px;  /* Larger font for the title */
+    -fx-font-weight: bold;
+    -fx-fill: blue;
+    -fx-font-family: "Arial Black";
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 5, 0, 1, 1); /* Drop shadow for 3D effect */
+    -fx-layoutX: 50%;  /* Center horizontally */
+    -fx-layoutY: 150px;  /* Positioned a bit lower */
+    -fx-text-align: center;
+}
+
+/* Styling for the buttons (Admin & Student) */
+.button3D {
+    -fx-font-size: 24px;  /* Larger font size for better visibility */
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-background-color: linear-gradient(#4CAF50, #45a049); /* Gradient effect for buttons */
+    -fx-background-radius: 10px;  /* Rounded corners */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0, 3, 3); /* Drop shadow for 3D effect */
+    -fx-pref-width: 250px;  /* Larger button width */
+    -fx-pref-height: 60px;  /* Larger button height */
+}
+
+/* Add hover effect for buttons */
+.button3D:hover {
+    -fx-background-color: linear-gradient(#45a049, #4CAF50);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 10, 0, 3, 3); /* Darker shadow on hover */
+}
+
+/* Specific styling for the Student Button */
+#studentButton {
+    -fx-background-color: linear-gradient(#2196F3, #1976D2); /* Blue gradient for student button */
+}
+
+/* Hover effect for student button */
+#studentButton:hover {
+    -fx-background-color: linear-gradient(#1976D2, #2196F3);
+}
+
+#loginButton:hover{
+    -fx-background-color: linear-gradient(#1976D2, #2196F3);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 10, 0, 3, 3); /* Darker shadow on hover */
+}
+
+/* Adjust button layout for better positioning on 1024x768 screen */
+#teacherLoginButton {
+    -fx-layoutX: 20%;
+    -fx-layoutY: 400px;  /* Adjusted to fit nicely */
+}
+
+#studentButton {
+    -fx-layoutX: 55%;
+    -fx-layoutY: 400px;  /* Adjusted to fit nicely */
+}
+
+
+
+
+/* Style for the main buttons in Teacher Home */
+.homeButton {
+    -fx-font-size: 24px;              /* Large font size */
+    -fx-font-weight: bold;            /* Bold text */
+    -fx-background-color: #4CAF50;    /* Base background color */
+    -fx-text-fill: white;             /* Text color */
+    -fx-padding: 15px 30px;           /* Padding for bigger button */
+    -fx-background-radius: 10px;      /* Rounded corners */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0, 3, 3); /* Drop shadow */
+}
+
+/* Hover effect for the buttons */
+.homeButton:hover {
+    -fx-background-color: #45a049;    /* Darker green when hovered */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 10, 0, 4, 4); /* Slightly stronger shadow */
+}

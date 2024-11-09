@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1024.0" style="-fx-background-color: #9EDF9C;" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.quizapplication.HomePageController">
+
+    <!-- Title Text for the Quiz Application -->
+    <Text fx:id="titleText" fill="#4e2c2c" layoutX="284.0" layoutY="166.0" style="-fx-fill: #526E48;" styleClass="titleText" text="Quiz Application" AnchorPane.leftAnchor="284.0" AnchorPane.topAnchor="113.171875" />
+
+    <!-- Teacher Button -->
+    <Button fx:id="teacherLoginButton" layoutX="143.0" layoutY="356.0" onAction="#teacherstart" prefHeight="50.0" prefWidth="200.0" styleClass="button3D" text="Teacher" AnchorPane.leftAnchor="143.0" AnchorPane.topAnchor="356.0" />
+
+    <!-- Student Button -->
+    <Button fx:id="studentButton" layoutX="597.0" layoutY="354.0" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #4CAF50;" styleClass="button3D" text="Student" AnchorPane.leftAnchor="597.0" AnchorPane.topAnchor="354.0" />
+
+</AnchorPane>

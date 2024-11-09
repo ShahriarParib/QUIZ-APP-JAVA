@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1024.0" style="-fx-background-color: #9EDF9C;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.quizapplication.TeacherHome">
+
+    <!-- Main VBox to hold the buttons vertically centered -->
+    <VBox alignment="CENTER" layoutX="362.0" layoutY="250.0" spacing="30.0" />
+
+     <!-- Add Student Button -->
+     <Button fx:id="addStudentButton" layoutX="379.0" layoutY="393.0" onAction="#handleAddStudent" styleClass="homeButton" stylesheets="@styles.css" text="Add Student" />
+
+     <!-- Add Quiz Button -->
+     <Button fx:id="addQuizButton" layoutX="398.0" layoutY="228.0" onAction="#handleAddQuiz" styleClass="homeButton" stylesheets="@styles.css" text="Add Quiz" />
+
+</AnchorPane>
