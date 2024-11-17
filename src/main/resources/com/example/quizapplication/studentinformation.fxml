@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.quizapplication.14511tudentInfoController">
+
+
+    <Label layoutX="380.0" layoutY="50.0" style="-fx-font-size: 32px; -fx-font-weight: bold;" text="Student Information" />
+
+
+    <TableView fx:id="studentTableView" layoutX="50.0" layoutY="100.0" prefHeight="600.0" prefWidth="900.0">
+
+
+        <TableColumn fx:id="serialColumn" text="Serial" prefWidth="100.0" cellValueFactory="new PropertyValueFactory<Student, Integer>('serial')" />
+
+
+        <TableColumn fx:id="nameColumn" text="Name" prefWidth="300.0" cellValueFactory="new PropertyValueFactory<Student, String>('name')" />
+
+
+        <TableColumn fx:id="emailColumn" text="Email" prefWidth="250.0" cellValueFactory="new PropertyValueFactory<Student, String>('email')" />
+
+
+        <TableColumn fx:id="mobileColumn" text="Mobile Number" prefWidth="250.0" cellValueFactory="new PropertyValueFactory<Student, String>('mobile')" />
+    </TableView>
+
+</AnchorPane>

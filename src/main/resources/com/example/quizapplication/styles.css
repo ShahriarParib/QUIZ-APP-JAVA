@@ -1,4 +1,4 @@
-/* Apply a background image to the AnchorPane */
+
 .root {
     -fx-background-image: url("images/quiz-background.jpg"); /* Path to the image file */
     -fx-background-size: cover;  /* Ensures the image covers the entire background */
@@ -6,7 +6,7 @@
     -fx-background-repeat: no-repeat;
 }
 
-/* Styling for the title text */
+
 .titleText {
     -fx-font-size: 48px;  /* Larger font for the title */
     -fx-font-weight: bold;
@@ -18,66 +18,131 @@
     -fx-text-align: center;
 }
 
-/* Styling for the buttons (Admin & Student) */
-.button3D {
-    -fx-font-size: 24px;  /* Larger font size for better visibility */
+/* Styling for general labels (Quiz Title, Remarks, etc.) */
+.Label {
+    -fx-font-size: 18px;
     -fx-font-weight: bold;
-    -fx-text-fill: white;
-    -fx-background-color: linear-gradient(#4CAF50, #45a049); /* Gradient effect for buttons */
-    -fx-background-radius: 10px;  /* Rounded corners */
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0, 3, 3); /* Drop shadow for 3D effect */
-    -fx-pref-width: 250px;  /* Larger button width */
-    -fx-pref-height: 60px;  /* Larger button height */
+    -fx-text-fill: #2C3E50; /* Dark color for labels */
 }
 
-/* Add hover effect for buttons */
+
+.TextField {
+    -fx-pref-width: 300px;
+    -fx-font-size: 16px;
+    -fx-background-color: #ecf0f1; /* Light grey background */
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+    -fx-focus-color: #2980b9; /* Focus color */
+}
+
+
+.TextField:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 5, 0, 2, 2); /* Adds a subtle shadow effect */
+}
+
+
+.button3D {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-background-color: linear-gradient(#4CAF50, #45a049);
+    -fx-background-radius: 10px;
+    -fx-pref-width: 250px;
+    -fx-pref-height: 60px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0, 3, 3);
+}
+
+
 .button3D:hover {
     -fx-background-color: linear-gradient(#45a049, #4CAF50);
     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 10, 0, 3, 3); /* Darker shadow on hover */
 }
 
-/* Specific styling for the Student Button */
+
 #studentButton {
     -fx-background-color: linear-gradient(#2196F3, #1976D2); /* Blue gradient for student button */
 }
 
-/* Hover effect for student button */
-#studentButton:hover {
-    -fx-background-color: linear-gradient(#1976D2, #2196F3);
+
+#teacherLoginButton {
+    -fx-layoutX: 20%;
+    -fx-layoutY: 400px;
 }
 
-#loginButton:hover{
-    -fx-background-color: linear-gradient(#1976D2, #2196F3);
+
+.homeButton {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-padding: 15px 30px;
+    -fx-background-radius: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0, 3, 3);
+}
+
+
+.homeButton:hover {
+    -fx-background-color: #45a049;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 10, 0, 4, 4); /* Stronger shadow for home button hover */
+}
+
+
+.saveButton {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-background-color: #27ae60;
+    -fx-background-radius: 5px;
+    -fx-pref-width: 150px;
+    -fx-pref-height: 40px;
+    -fx-padding: 10px;
+}
+
+
+.saveButton:hover {
+    -fx-background-color: #2ecc71;
+}
+
+
+.ok-submit-nextButton {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-background-color: linear-gradient(#4CAF50, #45a049);
+    -fx-background-radius: 10px;
+    -fx-pref-width: 250px;
+    -fx-pref-height: 60px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0, 3, 3);
+}
+
+
+.ok-submit-nextButton:hover {
+    -fx-background-color: linear-gradient(#45a049, #4CAF50);
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 10, 0, 3, 3);
+}
+
+
+#okButton:hover,
+#submitButton:hover,
+#nextQuestionButton:hover,
+#studentButton:hover,
+#teacherLoginButton:hover,
+#homeButton:hover {
+    -fx-background-color: linear-gradient(#45a049, #4CAF50); /* Darker gradient on hover */
     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 10, 0, 3, 3); /* Darker shadow on hover */
 }
 
-/* Adjust button layout for better positioning on 1024x768 screen */
-#teacherLoginButton {
-    -fx-layoutX: 20%;
-    -fx-layoutY: 400px;  /* Adjusted to fit nicely */
-}
 
-#studentButton {
-    -fx-layoutX: 55%;
-    -fx-layoutY: 400px;  /* Adjusted to fit nicely */
+.AnchorPane {
+    -fx-padding: 50px;
 }
 
 
-
-
-/* Style for the main buttons in Teacher Home */
-.homeButton {
-    -fx-font-size: 24px;              /* Large font size */
-    -fx-font-weight: bold;            /* Bold text */
-    -fx-background-color: #4CAF50;    /* Base background color */
-    -fx-text-fill: white;             /* Text color */
-    -fx-padding: 15px 30px;           /* Padding for bigger button */
-    -fx-background-radius: 10px;      /* Rounded corners */
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 10, 0, 3, 3); /* Drop shadow */
+.VBox {
+    -fx-spacing: 10px;
 }
 
-/* Hover effect for the buttons */
-.homeButton:hover {
-    -fx-background-color: #45a049;    /* Darker green when hovered */
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 10, 0, 4, 4); /* Slightly stronger shadow */
+
+.TextField:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.4), 5, 0, 2, 2); /* Adds a subtle shadow effect */
 }
