@@ -4,7 +4,7 @@ import java.sql.*;
 
 public class Questions {
     private Quiz quiz;
-    private Integer qeustionId;
+    private Integer questionId;
     private String question;
     private String option1;
     private String option2;
@@ -12,6 +12,8 @@ public class Questions {
     private String option4;
     private String answer;
 
+    public void setQuestionId(int anInt) {
+    }
 
 
     public static class myData
@@ -24,6 +26,7 @@ public class Questions {
     public static final String OPTION4="option4";
     public static final String ANSWER="answer";
     public static final String QUIZID ="quizId";
+    public static final String QUESTIONID="questionId";
 
 }
 
@@ -94,11 +97,15 @@ public class Questions {
         this.answer= answer;
     }
 
-public static void createTable()
+    public Integer getQuestionId() {
+        return questionId;
+    }
+
+    public static void createTable()
 {
 
-    String raw="CREATE TABLE %s (questionId INTEGER PRIMARY KEY AUTOINCREMENT, question VARCHAR(1000), %s INTEGER, %s VARCHAR(500), %s VARCHAR(500), %s VARCHAR(500), %s VARCHAR(500), %s VARCHAR(500),FOREIGN KEY (%s) REFERENCES %s(%s))";
-    String query=String.format(raw,myData.Table_name,myData.OPTION1,myData.OPTION2,myData.OPTION3
+    String raw="CREATE TABLE %s (%s INTEGER PRIMARY KEY AUTOINCREMENT, question VARCHAR(1000), %s INTEGER, %s VARCHAR(500), %s VARCHAR(500), %s VARCHAR(500), %s VARCHAR(500), %s VARCHAR(500),FOREIGN KEY (%s) REFERENCES %s(%s))";
+    String query=String.format(raw,myData.QUESTIONID,myData.OPTION1,myData.OPTION2,myData.OPTION3
     ,myData.OPTION4,myData.ANSWER,myData.QUIZID,myData.QUIZID,myData.Table_name,myData.QUIZID);
     try {
         System.out.println(query);

@@ -6,7 +6,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import java.io.IOException;
 public class TeacherLogin {
-    public void handleLogin(ActionEvent actionEvent) {
+    public void teacherlogin(ActionEvent actionEvent) {
         try {
 
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/quizapplication/teacher_home.fxml"));
@@ -31,5 +31,11 @@ public class TeacherLogin {
             e.printStackTrace();
         }
     }
+
+    public void handleLogin(ActionEvent actionEvent) {
+
+    }
+
+
 }
 

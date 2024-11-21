@@ -8,8 +8,11 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
@@ -59,7 +62,17 @@ public class Student_home implements Initializable {
         ObservableList<Node>nodes=this.stackpane.getChildren();
         if(nodes.size()==1)
         {
-            return;
+            try {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/quizapplication/studentdashboard.fxml"));
+                Parent teacherLoginPage = loader.load();
+                Stage stage = (Stage) ((javafx.scene.Node) actionEvent.getSource()).getScene().getWindow();
+                stage.setScene(new Scene(teacherLoginPage));
+                stage.setTitle("Teacher Login");
+                stage.show();
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
         this.stackpane.getChildren().remove (nodes.size()-1);
     }

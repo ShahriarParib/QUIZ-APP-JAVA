@@ -7,6 +7,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class Quiz {
@@ -153,6 +154,60 @@ public class Quiz {
 
         return quizes;
     }
+    public List<Questions> getQuestions() {
+        List<Questions> quizes = new ArrayList<>();
+
+        String query = String.
+                format("SELECT " +
+                                " %s , %s , " +
+                                "%s , %s ," +
+                                " %s , %s , \n" +
+                                "%s\n" +
+                                "FROM %s  where %s = ?",
+
+                        Questions.myData.QUESTIONID,
+                        Questions.myData.QUESTION,
+                        Questions.myData.OPTION1,
+                        Questions.myData.OPTION2,
+                        Questions.myData.OPTION3,
+                        Questions.myData.OPTION4,
+                        Questions.myData.ANSWER,
+                         Questions.myData.Table_name,
+                        Questions.myData.QUIZID
+
+
+                );
+        String connectionUrl = "jdbc:sqlite:quiz.db";
+        System.out.println(query);
+        try {
+            Class.forName("org.sqlite.JDBC");
+            try (Connection connection = DriverManager.getConnection(connectionUrl)) {
+
+                PreparedStatement ps = connection.prepareStatement(query);
+                ps.setInt(1, this.quizId);
+                ResultSet result = ps.executeQuery();
+
+                while (result.next()) {
+                    Questions tempQuestion = new Questions();
+                    tempQuestion.setQuestionId(result.getInt(1));
+                    tempQuestion.setQuestion(result.getString(2));
+                    tempQuestion.setOption1(result.getString(3));
+                    tempQuestion.setOption2(result.getString(4));
+                    tempQuestion.setOption3(result.getString(5));
+                    tempQuestion.setOption4(result.getString(6));
+                    tempQuestion.setAnswer(result.getString(7));
+                    tempQuestion.setQuiz(this);
+                    quizes.add(tempQuestion);
+                }
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+        return quizes;
+    }
+
+
 }
 
 

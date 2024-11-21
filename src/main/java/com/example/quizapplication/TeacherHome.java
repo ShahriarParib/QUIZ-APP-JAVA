@@ -17,7 +17,7 @@ public class TeacherHome {
 
             Stage stage = (Stage) ((javafx.scene.Node) actionEvent.getSource()).getScene().getWindow();
             stage.setScene(new Scene(teacherLoginPage));
-            stage.setTitle("Teacher Login");
+            stage.setTitle("Add Student");
 
 
             stage.show();

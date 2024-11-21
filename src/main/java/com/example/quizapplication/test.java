@@ -7,6 +7,10 @@ import model.Student;
 
 public class test {
     public static void main(String[] args) {
-    System.out.println(Quiz.getAllWithQuestionCount());
+
+
+        Quiz quiz =new Quiz();
+        quiz.setQuizId(3);
+        System.out.println(quiz.getQuestions());
     }
     }

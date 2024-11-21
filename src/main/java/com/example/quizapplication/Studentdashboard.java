@@ -1,23 +1,24 @@
 package com.example.quizapplication;
 
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+
 import java.io.IOException;
 
-public class HomePageController  {
+public class Studentdashboard {
+    public void attemptedquiz(ActionEvent actionEvent) {
+    }
 
-    @FXML
-    public void teacherloginentry(ActionEvent actionEvent) {
+    public void logoutstudent(ActionEvent actionEvent) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/quizapplication/teacher_login.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/quizapplication/Home_page.fxml"));
             Parent teacherLoginPage = loader.load();
             Stage stage = (Stage) ((javafx.scene.Node) actionEvent.getSource()).getScene().getWindow();
             stage.setScene(new Scene(teacherLoginPage));
-            stage.setTitle("Teacher Login");
+            stage.setTitle("HomePage");
             stage.show();
 
         } catch (IOException e) {
@@ -25,9 +26,9 @@ public class HomePageController  {
         }
     }
 
-    public void studentlogin(ActionEvent actionEvent) {
+    public void quizhome(ActionEvent actionEvent) {
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/quizapplication/studentlogin.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/quizapplication/studenthome.fxml"));
             Parent teacherLoginPage = loader.load();
             Stage stage = (Stage) ((javafx.scene.Node) actionEvent.getSource()).getScene().getWindow();
             stage.setScene(new Scene(teacherLoginPage));

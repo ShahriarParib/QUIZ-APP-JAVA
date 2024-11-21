@@ -20,14 +20,14 @@
 
         <SplitPane dividerPositions="0.2496087636932707" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <items>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #9EDF9C;">
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #F9DDA4;">
                     <children>
                         <VBox layoutY="166.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                             <padding>
                                 <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                             </padding>
                             <children>
-                                <Button fx:id="backButton" mnemonicParsing="false" onAction="#backfromaddstudent" style="-fx-background-color: #45a049;" text="Back" />
+                                <Button fx:id="backButton" mnemonicParsing="false" onAction="#backfromaddstudent" style="-fx-background-color: #2B2B52;" text="Back" textFill="#f2eded" />
                                 <Label prefHeight="90.0" prefWidth="212.0" text="  Enter Student Details">
                                     <font>
                                         <Font name="System Bold Italic" size="16.0" />
@@ -111,7 +111,7 @@
                                         <Insets bottom="10.0" right="10.0" top="10.0" />
                                     </padding>
                                 </Separator>
-                                <Button fx:id="savebutton" mnemonicParsing="false" onAction="#saveStudent" styleClass="saveButton" text="  Save Student">
+                                <Button fx:id="savebutton" mnemonicParsing="false" onAction="#saveStudent" style="-fx-background-color: #2B2B52;" styleClass="saveButton" text="  Save Student">
                                     <padding>
                                         <Insets bottom="10.0" right="10.0" top="10.0" />
                                     </padding>

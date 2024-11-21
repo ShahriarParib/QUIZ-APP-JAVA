@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="38.0" prefWidth="35.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.quizapplication.Progresslayout">
+   <children>
+      <Circle fx:id="circle" fill="#f9dda4" layoutX="21.0" layoutY="22.0" radius="21.0" stroke="BLACK" strokeType="INSIDE" />
+      <Label fx:id="number" layoutX="7.0" layoutY="8.0" prefHeight="3.0" prefWidth="28.0" text="10">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

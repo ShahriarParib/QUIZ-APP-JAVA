@@ -14,12 +14,13 @@ public class HelloApplication extends Application {
 //    checking
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("studenthome.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Home_page.fxml"));
         AnchorPane root = fxmlLoader.load();
-        Scene scene = new Scene(root, 1024, 768);
+        Scene scene = new Scene(root);
         scene.getStylesheets().add(getClass().getResource("styles.css").toExternalForm());
         stage.setResizable(false);
         stage.setScene(scene);
+        stage.setTitle("HomePage");
         stage.show();
        /* Quiz.createTable();
         Questions.createTable();

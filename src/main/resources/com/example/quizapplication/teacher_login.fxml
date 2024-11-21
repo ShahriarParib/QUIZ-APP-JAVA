@@ -4,15 +4,19 @@
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="768.0" prefWidth="1024.0" style="-fx-background-color: #9EDF9C;" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.quizapplication.TeacherLogin">
+<AnchorPane prefHeight="768.0" prefWidth="1024.0" style="-fx-background-color: #F3CC79;" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.quizapplication.TeacherLogin">
     <Text fx:id="titleText" layoutX="369.0" layoutY="150.0" style="-fx-font-size: 36px; -fx-font-weight: bold;" text="Teacher Login" />
     <Text fx:id="usernameLabel" layoutX="215.0" layoutY="247.0" style="-fx-font-size: 18px;" text="Username:" />
     <TextField fx:id="usernameField" layoutX="350.0" layoutY="228.0" prefWidth="300.0" promptText="Enter your username" />
     <Text fx:id="passwordLabel" layoutX="217.0" layoutY="309.0" style="-fx-font-size: 18px;" text="Password:" />
     <PasswordField fx:id="passwordField" layoutX="350.0" layoutY="290.0" prefWidth="300.0" promptText="Enter your password" />
-    <Button fx:id="loginButton" layoutX="350.0" layoutY="418.0" onAction="#handleLogin" prefWidth="300.0" style="-fx-font-size: 18px; -fx-background-color: #4CAF50; -fx-text-fill: white;" stylesheets="@styles.css" text="Login" />
-   <Button fx:id="backteacherlogin" layoutY="1.0"  onAction="#backteacherpage" mnemonicParsing="false" text="Back" />
+    <Button fx:id="loginButton" layoutX="350.0" layoutY="418.0" onAction="#teacherlogin" prefWidth="300.0" style="-fx-font-size: 18px; -fx-background-color: #2B2B52; -fx-text-fill: white;" stylesheets="@styles.css" text="Login">
+      <font>
+         <Font size="14.0" />
+      </font></Button>
+   <Button fx:id="backteacherlogin" layoutY="1.0" mnemonicParsing="false" onAction="#backteacherpage" style="-fx-background-color: #2B2B52;" text="Back" textFill="#f7eeee" />
 
 </AnchorPane>

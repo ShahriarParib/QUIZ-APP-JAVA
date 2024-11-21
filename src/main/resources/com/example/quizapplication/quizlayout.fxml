@@ -10,20 +10,19 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="102.0" prefWidth="196.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.quizapplication.Quizlayout">
+<AnchorPane prefHeight="102.0" prefWidth="196.0" style="-fx-background-color: 795959;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.quizapplication.Quizlayout">
    <children>
-      <VBox prefHeight="169.0" prefWidth="196.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <VBox prefHeight="169.0" prefWidth="196.0" style="-fx-background-color: #A3CB37;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <padding>
             <Insets bottom="23.0" left="23.0" right="23.0" top="23.0" />
          </padding>
          <children>
-            <Label fx:id="quiztitle" text="Quiz Title">
+            <Label fx:id="quiztitle" text="Quiz Title" textFill="#181515">
                <VBox.margin>
                   <Insets bottom="7.0" left="10.0" top="10.0" />
                </VBox.margin>
                <font>
-                  <Font size="20.0" />
+                  <Font name="System Bold" size="20.0" />
                </font>
             </Label>
             <Label fx:id="quizcount" text="Number of questions:20">

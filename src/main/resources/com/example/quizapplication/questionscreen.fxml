@@ -13,16 +13,15 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="756.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.quizapplication.Questionscreen">
    <children>
       <SplitPane dividerPositions="0.7" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #F9DDA4;">
                <children>
                   <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <ToolBar>
+                        <ToolBar style="-fx-background-color: #777E8B;">
                           <items>
                               <Label fx:id="title" text="Title">
                                  <font>
@@ -99,7 +98,7 @@
                         <Separator prefHeight="48.0" prefWidth="526.0" />
                         <FlowPane alignment="CENTER_RIGHT">
                            <children>
-                              <Button fx:id="next" mnemonicParsing="false" onAction="#nextquestion" text="Next Question">
+                              <Button fx:id="next" mnemonicParsing="false" onAction="#nextquestion" style="-fx-background-color: #2B2B52;" text="Next Question" textFill="#ece1e1">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -110,7 +109,7 @@
                                     <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                                  </FlowPane.margin>
                               </Button>
-                              <Button fx:id="submit" mnemonicParsing="false" onAction="#submit" text="Submit Quiz">
+                              <Button fx:id="submit" mnemonicParsing="false" onAction="#submit" style="-fx-background-color: #2B2B52;" text="Submit Quiz" textFill="#fcf8f8">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
@@ -129,12 +128,12 @@
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="203.0">
                <children>
-                  <Label fx:id="progress" alignment="CENTER" text="    Quiz Progress" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <Label fx:id="progress" alignment="CENTER" prefHeight="36.0" prefWidth="223.0" style="-fx-background-color: #777E8B;" text="    Quiz Progress" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <FlowPane alignment="CENTER" hgap="10.0" layoutY="40.0" prefHeight="358.0" prefWidth="223.0" vgap="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+                  <FlowPane fx:id="progressplane" hgap="10.0" layoutY="40.0" prefHeight="358.0" prefWidth="223.0" style="-fx-background-color: #E5E1DA;" vgap="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
                      <padding>
                         <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                      </padding>

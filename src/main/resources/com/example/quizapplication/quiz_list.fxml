@@ -9,7 +9,7 @@
     <children>
       <ScrollPane fitToHeight="true" fitToWidth="true" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <content>
-              <FlowPane fx:id="quizlistcontainer" alignment="CENTER" prefHeight="200.0" prefWidth="200.0">
+              <FlowPane fx:id="quizlistcontainer" alignment="CENTER" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #F9DDA4;">
                   <padding>
                       <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
                   </padding>

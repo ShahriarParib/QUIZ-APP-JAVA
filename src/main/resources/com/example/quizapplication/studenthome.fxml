@@ -7,9 +7,9 @@
 
 <AnchorPane prefHeight="682.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.quizapplication.Student_home">
     <children>
-      <ToolBar prefHeight="36.0" prefWidth="1024.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <ToolBar prefHeight="36.0" prefWidth="1024.0" style="-fx-background-color: #2C3335;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
-          <Button fx:id="back" mnemonicParsing="false" onAction="#handleback" text="Back" />
+          <Button fx:id="back" mnemonicParsing="false" onAction="#handleback" style="-fx-background-color: #2B2B52;" text="Back" textFill="#f4f0f0" />
         </items>
       </ToolBar>
         <StackPane fx:id="stackpane" layoutY="36.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="36.0" />

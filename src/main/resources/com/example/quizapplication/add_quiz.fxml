@@ -9,14 +9,14 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="768.0" prefWidth="1024.0" style="-fx-background-color: #9EDF9C;" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.quizapplication.AddQuiz">
+<AnchorPane prefHeight="768.0" prefWidth="1024.0" style="-fx-background-color: #F9DDA4;" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.quizapplication.AddQuiz">
 
           <!-- Label for 'Add a New Quiz' -->
     <Label layoutX="406.0" layoutY="27.0" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Add a New Quiz" />
 
           <!-- Quiz Title Section -->
     <TextField fx:id="quizTitleField" layoutX="347.0" layoutY="132.0" prefWidth="300.0" promptText="Enter Quiz Title" style="-fx-underline: true; -fx-font-size: 16px;" />
-    <Button fx:id="okButton" layoutX="672.0" layoutY="131.0" onAction="#handleOkButton" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-background-color: #45a049;" text="OK" />
+    <Button fx:id="okButton" layoutX="672.0" layoutY="131.0" onAction="#handleOkButton" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-background-color: #2B2B52;" text="OK" textFill="#faf8f8" />
 
           <!-- Label for 'Quiz Title' placed beside the input box -->
     <Label layoutX="259.0" layoutY="137.0" style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Quiz Title:" />
@@ -48,10 +48,10 @@
     <TextField fx:id="option2Field" layoutX="256.0" layoutY="437.0" promptText="Option 2" style="-fx-underline: true;" />
     <TextField fx:id="option1Field" layoutX="257.0" layoutY="387.0" promptText="Option 1" style="-fx-underline: true;" />
     <Label layoutX="261.0" layoutY="343.0" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Options:" />
-    <Button fx:id="nextQuestionButton" layoutX="736.0" layoutY="663.0" onAction="#nextquestion" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-background-color: #45a049;" stylesheets="@styles.css" text="Next Question" />
-    <Button fx:id="submitButton" layoutX="894.0" layoutY="663.0" onAction="#submitquiz" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-background-color: #45a049;" stylesheets="@styles.css" text="Submit" />
+    <Button fx:id="nextQuestionButton" layoutX="736.0" layoutY="663.0" onAction="#nextquestion" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-background-color: #2B2B52;" stylesheets="@styles.css" text="Next Question" textFill="#fcfafa" />
+    <Button fx:id="submitButton" layoutX="894.0" layoutY="663.0" onAction="#submitquiz" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-background-color: #2B2B52;" stylesheets="@styles.css" text="Submit" textFill="#fcfafa" />
     <TextField fx:id="questionNameField" layoutX="254.0" layoutY="257.0" prefHeight="70.0" prefWidth="505.0" promptText="Enter Question Name" />
-    <Button fx:id="backfromnewquiz" layoutY="1.0" mnemonicParsing="false" onAction="#backnewquiz" text="Back" />
+    <Button fx:id="backfromnewquiz" layoutY="1.0" mnemonicParsing="false" onAction="#backnewquiz" style="-fx-background-color: #2B2B52;" text="Back" textFill="#fcf4f4" />
     <Label layoutX="250.0" layoutY="215.0" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Question Title:" />
 
 </AnchorPane>
