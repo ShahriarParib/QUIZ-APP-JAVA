@@ -6,6 +6,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Quiz {
     // Properties
@@ -87,7 +89,8 @@ public class Quiz {
                     return keys.getInt(1);
                 }
             }
-        } catch (Exception ex) {
+        }
+        catch (Exception ex) {
             ex.printStackTrace();
             return -1;
         }
@@ -105,7 +108,53 @@ public class Quiz {
         }
         return flag;
     }
+    public static Map<Quiz, Integer> getAllWithQuestionCount() {
+        Map<Quiz, Integer> quizes = new HashMap<>();
+        Quiz key = null;
 
+        String query = String.
+                format("SELECT %s.%s , %s  ," +
+                                " COUNT(*) as question_count  " +
 
+                                "FROM %s join %s on %s.%s = %s.%s GROUP BY %s.%s",
+                        MetaData.TABLE_NAME,
+                        MetaData.QUIZ_ID,
+                        MetaData.TITLe,
+                        MetaData.TABLE_NAME,
+                        Questions.myData.Table_name,
+                        Questions.myData.Table_name,
+                        Questions.myData.QUIZID,
+                        MetaData.TABLE_NAME,
+                        MetaData.QUIZ_ID,
+                        MetaData.TABLE_NAME,
+                        MetaData.QUIZ_ID
+                );
+        String connectionUrl ="jdbc:sqlite:quiz.db";
+        System.out.println(query);
+        try {
+            Class.forName("org.sqlite.JDBC");
+            try (Connection connection = DriverManager.getConnection(connectionUrl)) {
 
+                PreparedStatement ps = connection.prepareStatement(query);
+                ResultSet result = ps.executeQuery();
+
+                while (result.next()) {
+                    Quiz temp = new Quiz();
+                    temp.setQuizId(result.getInt(1));
+                    temp.setTitle(result.getString(2));
+                    int count = result.getInt(3);
+                    quizes.put(temp, count);
+
+                }
+            }
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+
+        return quizes;
+    }
 }
+
+
+
+

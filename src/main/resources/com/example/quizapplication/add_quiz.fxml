@@ -11,23 +11,24 @@
 
 <AnchorPane prefHeight="768.0" prefWidth="1024.0" style="-fx-background-color: #9EDF9C;" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.quizapplication.AddQuiz">
 
-    <!-- Label for 'Add a New Quiz' -->
+          <!-- Label for 'Add a New Quiz' -->
     <Label layoutX="406.0" layoutY="27.0" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Add a New Quiz" />
 
-    <!-- Quiz Title Section -->
+          <!-- Quiz Title Section -->
     <TextField fx:id="quizTitleField" layoutX="347.0" layoutY="132.0" prefWidth="300.0" promptText="Enter Quiz Title" style="-fx-underline: true; -fx-font-size: 16px;" />
     <Button fx:id="okButton" layoutX="672.0" layoutY="131.0" onAction="#handleOkButton" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-background-color: #45a049;" text="OK" />
 
-    <!-- Label for 'Quiz Title' placed beside the input box -->
+          <!-- Label for 'Quiz Title' placed beside the input box -->
     <Label layoutX="259.0" layoutY="137.0" style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Quiz Title:" />
+   <VBox layoutX="-77.0" layoutY="186.0" prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="-186.0" AnchorPane.leftAnchor="-77.0" AnchorPane.rightAnchor="77.0" AnchorPane.topAnchor="186.0" />
 
-    <HBox layoutX="250.0" layoutY="150.0" spacing="10" />
+          <HBox layoutX="250.0" layoutY="150.0" spacing="10" />
 
-    <VBox layoutX="250.0" layoutY="200.0" spacing="10" />
+          <VBox layoutX="250.0" layoutY="200.0" spacing="10" />
 
-    <VBox layoutX="250.0" layoutY="280.0" spacing="10" />
+          <VBox layoutX="250.0" layoutY="280.0" spacing="10" />
 
-    <VBox layoutX="337.0" layoutY="584.0" spacing="10">
+          <VBox layoutX="337.0" layoutY="584.0" spacing="10">
         <Label style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Select the Right Answer:" />
         <HBox spacing="15">
             <RadioButton fx:id="option1RadioButton" text="Option 1">
@@ -41,7 +42,7 @@
         </HBox>
     </VBox>
 
-    <HBox layoutX="50.0" layoutY="700.0" spacing="20" />
+          <HBox layoutX="50.0" layoutY="700.0" spacing="20" />
     <TextField fx:id="option4Field" layoutX="254.0" layoutY="520.0" promptText="Option 4" style="-fx-underline: true;" />
     <TextField fx:id="option3Field" layoutX="256.0" layoutY="480.0" promptText="Option 3" style="-fx-underline: true;" />
     <TextField fx:id="option2Field" layoutX="256.0" layoutY="437.0" promptText="Option 2" style="-fx-underline: true;" />
